@@ -51,7 +51,7 @@ export default function Header() {
                 transition={{ duration: 0.15 }}
                 key="header-buttons"
               >
-                <OpenSidebar setNavVisible={setNavVisible} className="max-md:hidden" />
+                <OpenSidebar setNavVisible={setNavVisible} />
                 <HeaderNewChat />
               </motion.div>
             )}
