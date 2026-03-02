@@ -4,8 +4,9 @@ import { TooltipAnchor, Button, NewChatIcon } from '@librechat/client';
 import { useChatContext } from '~/Providers';
 import { clearMessagesCache } from '~/utils';
 import { useLocalize } from '~/hooks';
+import { cn } from '~/utils';
 
-export default function HeaderNewChat() {
+export default function NewChat({ className }: { className?: string }) {
   const localize = useLocalize();
   const queryClient = useQueryClient();
   const { conversation, newConversation } = useChatContext();
@@ -27,9 +28,11 @@ export default function HeaderNewChat() {
         <Button
           size="icon"
           variant="outline"
-          data-testid="wide-header-new-chat-button"
           aria-label={localize('com_ui_new_chat')}
-          className="rounded-xl bg-presentation duration-0 hover:bg-surface-active-alt max-md:hidden"
+          className={cn(
+            'rounded-xl bg-presentation duration-0 hover:bg-surface-active-alt max-md:hidden',
+            className,
+          )}
           onClick={clickHandler}
         >
           <NewChatIcon />
