@@ -12,7 +12,7 @@ module.exports = {
   theme: {
     fontFamily: {
       sans: ['Inter', 'sans-serif'],
-      mono: ['Roboto Mono', 'monospace'],
+      mono: ['JetBrains Mono', 'monospace'],
     },
     // fontFamily: {
     //   sans: ['Söhne', 'sans-serif'],
